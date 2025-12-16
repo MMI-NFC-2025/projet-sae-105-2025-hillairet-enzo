@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Stars - Cecilia Payne Gaposchkin</title>
+    <meta name="description"
+        content="Découvrez Cecilia Payne-Gaposchkin, l'astrophysicienne oubliée qui a découvert la composition des étoiles.">
+
+    <link rel="stylesheet" href="../src/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/webp" href="../assets/img/logo-favicon.webp">
+    <link rel="apple-touch-icon" href="../assets/img/logo-favicon.webp">
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="index.html" class="header__link">
+            <img class="header__logo" src="../assets/img/logo.webp" alt="Logo Hidden Stars">
+        </a>
+
+        <button class="menu-btn" aria-label="Menu" aria-controls="main-menu" aria-expanded="false">
+            <span class="menu-btn__bar menu-btn__bar--top"></span>
+            <span class="menu-btn__bar menu-btn__bar--bottom"></span>
+        </button>
+
+        <nav id="main-menu" class="menu" hidden>
+            <ul class="menu__list u-list-unstyled">
+                <li class="menu__item"><a class="menu__link" href="index.html">Accueil</a></li>
+                <li class="menu__item"><a class="menu__link" href="biographie.html">La chercheuse</a></li>
+                <li class="menu__item"><a class="menu__link" href="glossaire.html">Glossaire</a></li>
+                <li class="menu__item"><a class="menu__link" href="projets.html">Autres projets</a></li>
+                <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
+                <li class="menu__item">
+                    <a class="menu__link" href="../en/index.html" hreflang="en">EN / FR</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+
+        <section class="hero">
+            <div class="hero__content">
+                
+                <h1 class="Cecilia__title">
+                    Cecilia Payne Gaposchkin
+                </h1>
+                <p class="cecilia_payne_gapochkin__description">
+                    Cecilia Payne-Gaposchkin est la première astrophysicienne à avoir
+                    démontré que les étoiles sont composées d'hydrogène et d'hélium.
+                    Une découverte ignorée à son époque, mais indispensable pour notre
+                    compréhension de l'univers.
+                </p>
+
+                <a href="biographie.html" class="btn btn--primary">En savoir plus +</a>
+            </div>
+
+            <div class="Cecilia_photo_homepage__media">
+                <img class="hero__img" src="../assets/img/photo petite homepage.webp"
+                    alt="Portrait de Cecilia Payne Gaposchkin">
+            </div>
+        </section>
+
+        <section class="section section--projects">
+            <div class="section__header">
+                <h2 class="section__title">L'effet Matilda</h2>
+                <p class="section__desc">
+                    [cite_start]Découvrez les réalisations d'autres étudiants sur le thème "Femmes de science". [cite: 320]
+                </p>
+            </div>
+        
+            <div class="carousel">
+        
+                <a href="lachercheuse.html" class="carousel__link">
+                    <img class="carousel__img" src="assets/img/lachercheuse.webp">
+                </a>
+
+                <a href="leschercheusesdanslaliterrature.html" class="carousel__link">
+                    <img class="carousel__img" src="assets/img/literrature.webp">
+                </a>
+
+                <a href="sathéorie.html" class="carousel__link">
+                    <img class="carousel__img" src="assets/img/sathéorie.webp">
+                </a>
+
+                <a href="lesfilms.html" class="carousel__link">
+                    <img class="carousel__img" src="assets/img/lesfilms.webp">
+                </a>
+
+                <a href="figuresfémininesoubliées.html" class="carousel__link">
+                    <img class="carousel__img" src="assets/img/figuresfémininesoubliées.webp">
+                </a>
+        
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <img class="header__logo" src="../assets/img/logo.webp" alt="Logo Hidden Stars">
+            <nav class="footer__nav">
+                <ul class="footer__list u-list-unstyled">
+                    <li><a href="mentions-legales.html" class="footer__link">Mentions légales</a></li>
+                    <li><a href="contact.html" class="footer__link">Formulaire de contact</a></li>
+                    <li><a href="biographie.html" class="footer__link">À propos</a></li>
+                    <li><a href="glossaire.html" class="footer__link">Glossaire</a></li>
+                    <li><a href="projets.html" class="footer__link">Autres projets</a></li>
+                </ul>
+            </nav>
+            <p class="footer__credits">
+                Projet réalisé en 2025 dans le cadre d'un exercice pédagogique au département MMI de Montbéliard. [cite:
+                43-46]
+            </p>
+        </div>
+    </footer>
+
+    <script type="module" src="../src/js/script.js"></script>
+
+</body>
+
+</html>

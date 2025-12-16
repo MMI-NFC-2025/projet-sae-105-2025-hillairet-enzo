@@ -1,0 +1,25 @@
+/* src/css/style.css */
+
+/* 1. Configuration */
+@import "vendors/normalize.css";
+@import "utils/variables.css";
+
+/* 2. Base */
+@import "base/main.css";
+@import "base/media.css";
+
+/* 3. Structure (Layout) */
+@import "layout/header.css";
+@import "layout/footer.css";
+@import "layout/section.css";
+/* Contient la Frise et les titres */
+
+/* 4. Composants */
+@import "components/button.css";
+/* Pour le bouton "En savoir plus" */
+@import "components/hero.css";
+/* Pour le haut de page */
+@import "components/menu.css";
+/* Pour le menu burger */
+@import "components/carousel.css";
+/* Pour les projets */

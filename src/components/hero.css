@@ -1,0 +1,85 @@
+.hero {
+    position: relative;
+    /* On décale le contenu sous le header fixe */
+    padding-top: calc(var(--space-3xl) + 80px);
+    padding-bottom: var(--space-3xl);
+    padding-left: var(--space-xl);
+    padding-right: var(--space-xl);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xl);
+
+    /* Pour gérer la superposition */
+    overflow: hidden;
+}
+
+/* Le texte */
+.hero__content {
+    position: relative;
+    z-index: 10;
+    max-width: 600px;
+}
+
+.hero__subtitle {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-text-light);
+    margin-bottom: var(--space-md);
+}
+
+.hero__title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    /* Responsive typography */
+    line-height: 1.1;
+    margin-bottom: var(--space-lg);
+}
+
+/* Effet "Surligné" ou couleur différente pour le nom */
+.u-highlight {
+    color: var(--color-primary);
+    /* Ton blanc ou bleu */
+    display: block;
+    /* Force le retour à la ligne si besoin */
+}
+
+.hero__description {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: var(--space-xl);
+    max-width: 50ch;
+    /* Limite la largeur pour la lecture */
+}
+
+/* L'image */
+.hero__media {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero__img {
+    border-radius: var(--radius-md);
+    max-height: 500px;
+    object-fit: cover;
+    /* Petit effet de lueur (optionnel, style "Espace") */
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+/* Version Ordinateur */
+@media (min-width: 900px) {
+    .hero {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 80vh;
+        /* Prend presque tout l'écran */
+    }
+
+    .hero__media {
+        width: 45%;
+        justify-content: flex-end;
+    }
+}

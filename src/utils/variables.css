@@ -1,0 +1,40 @@
+:root {
+
+    --ffffff: #ffffff;
+    --878080: #878080;
+    --000000: #000000;
+    --d9d9d9: #d9d9d9;
+    --1336b1: #1336b1;
+    --color-6: #878080;
+    --1e1e1e: #1e1e1e;
+    --color-bg: var(--000000);
+
+    /* Le texte principal (Blanc) */
+    --color-text: var(--ffffff);
+    /* Le texte secondaire / Dates (Gris) */
+    --color-text-light: var(--878080);
+    /* Les liens et boutons d'action (Bleu) */
+    --color-primary: var(--1336b1);
+    /* Les bordures ou séparations subtiles */
+    --color-border: var(--1e1e1e);
+
+
+    /* On attend tes variables de police ici... */
+    --font-sans: "Inter", sans-serif;
+    /* Valeur par défaut en attendant */
+
+    --space-xs: 0.25rem;
+    /* 4px */
+    --space-sm: 0.5rem;
+    /* 8px */
+    --space-md: 1rem;
+    /* 16px */
+    --space-lg: 1.5rem;
+    /* 24px */
+    --space-xl: 2rem;
+    /* 32px */
+    --space-2xl: 4rem;
+    /* 64px */
+
+    --radius-sm: 4px;
+}

@@ -1,0 +1,55 @@
+/* src/css/layout/section.css */
+
+/* =========================================
+   1. STYLES GÉNÉRAUX DES SECTIONS
+   ========================================= */
+
+.section {
+    position: relative;
+    padding: var(--space-3xl) var(--space-xl);
+    /* Petit trait discret pour séparer les sections (optionnel) */
+    border-top: 1px solid var(--1e1e1e);
+}
+
+.section--projects {
+    background-color: var(--color-bg);
+    /* Noir */
+}
+
+/* =========================================
+   2. EN-TÊTE DE SECTION (Titres + Intro)
+   ========================================= */
+
+.section__header {
+    margin-bottom: var(--space-2xl);
+    max-width: 800px;
+}
+
+/* C'est ce qui manquait pour ton titre "L'effet Matilda" */
+.section__title {
+    font-family: var(--font-sans);
+    font-size: clamp(2rem, 5vw, 3rem);
+    /* Gros titre responsive */
+    font-weight: 600;
+    color: var(--color-text);
+    /* Blanc */
+    margin-bottom: var(--space-md);
+    line-height: 1.1;
+}
+
+/* C'est ce qui manquait pour le texte descriptif */
+.section__desc {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--color-text-light);
+    /* Gris clair */
+    margin-top: var(--space-md);
+    max-width: 60ch;
+}
+
+.section__intro {
+    font-size: 1.5rem;
+    color: var(--color-text);
+    margin-bottom: var(--space-md);
+}
+
