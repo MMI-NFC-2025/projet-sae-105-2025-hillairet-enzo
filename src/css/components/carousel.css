@@ -1,0 +1,85 @@
+/* src/css/components/carousel.css */
+
+/* --- 1. LA SECTION GLOBALE --- */
+.section--projects {
+    /* Espace au-dessus pour séparer de l'intro */
+    margin-top: var(--space-3xl); 
+    padding-bottom: var(--space-3xl);
+}
+
+/* --- 2. LE TITRE ET LA DESCRIPTION --- */
+.section__header {
+    /* On aligne le texte avec le reste du site */
+    padding-left: var(--space-xl);
+    padding-right: var(--space-xl);
+    margin-bottom: 0;
+}
+
+.section__title {
+    font-size: 3rem; /* Taille H2 */
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 10px;
+}
+
+.section__desc {
+    font-size: 1rem;
+    color: var(--color-text-light); /* Gris clair */
+    max-width: 600px;
+}
+
+/* --- 3. LE CARROUSEL (La zone qui défile) --- */
+/* src/css/components/carousel.css */
+
+/* --- LE CONTENEUR --- */
+.carousel {
+    display: flex;
+    gap: 20px; /* Espace entre les images */
+    
+    /* Défilement */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; 
+    
+    padding: 30px 7.5vw; 
+    margin-top: -20px;
+    margin-bottom: 60px;
+        
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; 
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* --- LES CARTES (Version Mobile) --- */
+.carousel__link {
+    flex: 0 0 auto;
+    
+    /* Mobile : prend presque toute la largeur */
+    width: 85vw; 
+    
+    /* Mobile : s'aligne au CENTRE de l'écran */
+    scroll-snap-align: center; 
+    
+    background: transparent;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+/* --- L'IMAGE --- */
+.carousel__img {
+    width: 100%;
+    height: auto; /* S'adapte à la hauteur réelle de ton image */
+    display: block; 
+    border-radius: var(--radius-md);
+    
+    /* Ombre (si ton image n'en a pas déjà) */
+    /* box-shadow: 0 4px 10px rgba(0,0,0,0.3); */
+}
+
+.carousel__link:active {
+    transform: scale(0.95); /* Zoom arrière (effet de clic physique) */
+    transition: transform 0.1s; /* Plus rapide pour le tactile */
+}
+

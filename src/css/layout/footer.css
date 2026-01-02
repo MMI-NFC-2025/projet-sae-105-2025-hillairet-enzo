@@ -1,0 +1,111 @@
+/* src/css/layout/footer.css */
+
+/* --- 1. LE CONTENEUR PRINCIPAL --- */
+.footer {
+    background-color: #070606; /* Noir profond */
+    color: white;
+    padding: var(--space-3xl) var(--space-xl);
+    
+    /* Espace entre le carrousel et le footer */
+    margin-top: 60px; 
+    border: none;
+}
+
+.footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* Espace entre Logo / Liens / Bas de page */
+    
+    text-align: left;
+}
+
+
+/* --- 2. LE LOGO (Image seule) --- */
+.footer__logo {
+    display: block; /* Plus besoin de flex car il n'y a que l'image */
+    margin-bottom: 40px;
+}
+
+/* On cible l'image à l'intérieur pour l'alignement */
+.footer__logo img {
+    height: 46px; 
+    width: auto; 
+    object-fit: contain;
+
+    margin-left: 5px; 
+}
+
+
+/* --- 3. LA LISTE DES LIENS --- */
+.footer__nav {
+    width: 100%;
+}
+
+.footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espace vertical entre les liens */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__list a {
+    color: white;
+    font-size: 1.4rem; /* Texte grand et lisible */
+    text-decoration: none;
+    line-height: 0.9;
+    transition: opacity 0.3s ease;
+    margin-left: 10px;
+}
+
+.footer__list a:hover {
+    opacity: 0.7; /* Léger effet gris au survol */
+}
+
+
+/* --- 4. LE BAS DE PAGE (Crédits + Gros Logo) --- */
+.footer__bottom {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-top: 10px;
+}
+
+.footer__desc {
+    /* --- MODIFICATION 1 : LE TEXTE S'ADAPTE --- */
+    /* On lui dit de prendre toute la place disponible à gauche */
+    flex: 1; 
+    
+    font-size: 1.2rem;
+    color: #cccccc; 
+    line-height: 1.1;
+    margin: 0;
+    
+    /* On garde ton alignement */
+    margin-left: 10px;
+    
+    /* On ajoute un petit coussin à droite pour ne pas toucher le logo */
+    padding-right: 15px; 
+}
+
+.footer__big-img {
+    /* --- 1. ON AGRANDIT --- */
+    /* On passe à 180px (ou plus si tu veux) */
+    width: 200px; 
+    
+    /* Important : garde ça pour qu'il ne s'écrase pas */
+    flex-shrink: 0; 
+    
+    height: auto;
+    display: block;
+    
+    /* --- 2. L'ASTUCE POUR LE FAIRE DESCENDRE --- */
+    /* "transform: translateY(X)" déplace l'élément vers le bas */
+    /* sans affecter la position du texte à côté. */
+    /* Essaie 20px, 30px ou 40px pour voir ce qui rend le mieux. */
+    transform: 50px;
+}

@@ -1,0 +1,59 @@
+/* src/css/components/menu.css */
+
+/* --- LE BOUTON BURGER --- */
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    padding: 0;
+    z-index: 1001; /* Doit être au-dessus du menu ouvert */
+}
+
+.menu-btn__bar {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-text); /* Blanc */
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* --- LE MENU (La liste des liens) --- */
+.menu {
+    /* Prend tout l'écran */
+    position: fixed;
+    inset: 0; /* Raccourci pour top:0, right:0, bottom:0, left:0 */
+    background-color: var(--color-bg); /* Fond noir */
+    
+    /* Centre le contenu */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-xl);
+    
+    /* Transition fluide */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* État caché (par défaut via l'attribut 'hidden' dans le HTML) */
+.menu[hidden] {
+    display: none; /* Ou opacity: 0; pointer-events: none; pour l'animer */
+}
+
+/* Style des liens dans le menu */
+.menu__link {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.menu__link:hover {
+    color: var(--color-text-light);
+}

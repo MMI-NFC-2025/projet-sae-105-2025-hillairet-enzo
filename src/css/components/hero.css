@@ -1,0 +1,78 @@
+/* src/css/components/hero.css */
+
+/* --- LE BANDEAU ÉTOILÉ --- */
+.hero {
+
+    margin-top: 70px;
+    /* INDISPENSABLE : Comme la section est vide, il faut lui donner une hauteur */
+    height: 85vh;       /* 40% de la hauteur de l'écran */
+    min-height: 250px;  /* Minimum de sécurité */
+
+    /* Image de fond */
+    background-image: url('../../../assets/img/hero.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Plus de padding ni de flexbox nécessaire ici */
+}
+
+/* --- LA SECTION DE CONTENU EN DESSOUS --- */
+.intro {
+    /* --- CHANGEMENT ICI --- */
+    /* Avant c'était -100px. On met 0 pour que ça commence normalement en dessous. */
+    margin-top: 0; 
+    
+    /* On garde de l'espace à l'intérieur pour aérer */
+    padding: var(--space-xl);
+    
+    /* Le reste pour la mise en page */
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xl);
+    
+    /* Assure-toi que le fond est bien de la couleur de ton site (noir) */
+    background-color: var(--color-bg);
+}
+
+/* Le texte */
+.intro__title {
+    font-size: 1.8rem;
+    line-height: 1.1;
+    margin-bottom: var(--space-md);
+    color: var(--color-text);
+}
+
+.intro__description {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: var(--space-xl);
+    max-width: 65ch;
+}
+
+/* src/css/components/hero.css */
+
+/* Le style du lien intégré au texte */
+.intro__link {
+    /* La couleur bleue demandée */
+    color: #1336b1; 
+    
+    /* On le met en gras pour qu'on comprenne que c'est important */
+    font-weight: 600; 
+    
+    /* On enlève le soulignement par défaut (ou laisse-le si tu préfères) */
+    text-decoration: none; 
+    
+    /* Petit espace avant le lien pour ne pas coller au dernier mot */
+    margin-left: 5px;
+    
+    /* Transition douce pour l'effet au survol */
+    transition: color 0.2s ease;
+}
+
+/* Au survol de la souris */
+.intro__link:hover {
+    color: #007BFF;/* Bleu plus foncé */
+    text-decoration: underline; /* Souligne quand on passe dessus */
+    cursor: pointer;
+}

@@ -1,0 +1,41 @@
+/* src/css/layout/header.css */
+
+.header {
+    display: flex;
+    /* "space-between" envoie le 1er élément (logo) tout à gauche 
+       et le dernier (menu) tout à droite */
+    justify-content: space-between; 
+    align-items: center;
+
+    /* MARGES INTÉRIEURES DU HEADER */
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 20px; /* Espace normal à droite pour le menu */
+    padding-left: 20px; 
+
+    /* Fixé en haut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header__link {
+    /* IMPORTANT : On supprime les lignes "absolute", "left: 50%" et "transform" 
+       pour que le logo reprenne sa place naturelle à gauche. */
+    position: static;
+    transform: none;
+}
+
+.header__logo {
+    height: 50px; 
+    width: auto; 
+    object-fit: contain;
+    
+    /* L'ASTUCE POUR COLLER AU BORD */
+    /* On tire le logo vers la gauche pour annuler le vide de l'image ou du padding */
+    margin-left: -15px; 
+}
