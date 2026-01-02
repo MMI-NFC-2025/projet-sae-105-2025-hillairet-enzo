@@ -21,4 +21,8 @@
 @import "components/menu.css";
 /* Pour le menu burger */
 @import "components/carousel.css";
+
+/* src/css/style.css */
+
+@import "pages/lachercheuse.css";
 /* Pour les projets */

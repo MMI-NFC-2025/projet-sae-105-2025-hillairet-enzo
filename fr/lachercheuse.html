@@ -21,7 +21,7 @@
 <body>
 
     <header class="header">
-        <a href="#" class="header__link" aria-label="Retour haut de page">
+        <a href="index.html" class="header__link">
             <img class="header__logo" src="../assets/img/logo.webp" alt="Logo Hidden Stars">
         </a>
 
@@ -36,7 +36,7 @@
                 <h2 class="menu__title">Menu.</h2>
 
                 <ul class="menu__list">
-                    <li class="menu__item"><a class="menu__link" href="lachercheuse.html">La chercheuse.</a></li>
+                    <li class="menu__item"><a class="menu__link" href="biographie.html">La chercheuse.</a></li>
                     <li class="menu__item"><a class="menu__link" href="leschercheusesdanslaliterrature.html">Littérature.</a></li>
                     <li class="menu__item"><a class="menu__link" href="sathéorie.html">Sa théorie.</a></li>
                     <li class="menu__item"><a class="menu__link" href="lesfilms.html">Les films.</a></li>
@@ -54,59 +54,85 @@
 
     <main class="main-content">
 
-        <section class="hero"></section>
+        <section class="section bio-header">
+            <h1 class="bio-title">La chercheuse.</h1>
+            <p class="bio-subtitle">Cecilia Payne-Gaposchkin l'étoile oubliée de l'astrophysique</p>
+        </section>
 
-
-        <section class="intro">
-            <div class="intro__content">
-                <h1 class="intro__title">Cecilia Payne Gaposchkin</h1>
-
-                <p class="intro__description">
-                    Cecilia Payne-Gaposchkin est la première astrophysicienne à avoir
-                    démontré que les étoiles sont composées d'hydrogène et d'hélium.
-                </p>
-                    
-                <p>Une découverte ignorée à son époque, mais indispensable pour notre
-                    compréhension de l'univers.
-                    <a href="lachercheuse.html" class="intro__link">En savoir plus +</a>
-                </p>
+        <section class="section bio-profile">
+            <div class="bio-profile__content">
+                <div class="bio-profile__img-wrapper">
+                    <img src="../assets/img/portrait page 1.webp" alt="Portrait de Cecilia Payne" class="bio-profile__img">
+                </div>
+                
+                <div class="bio-infos">
+                    <h2 class="bio-infos__title">Informations.</h2>
+                    <ul class="bio-infos__list">
+                        <li><strong>Nom de naissance:</strong> Cecilia Helena Payne Gaposchkin</li>
+                        <li><strong>Naissance:</strong> 1900</li>
+                        <li><strong>Décès:</strong> 1979</li>
+                        <li><strong>Nationalité:</strong> Britannique</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
+        <section class="section bio-text">
+            <p>
+                En 1925, Cecilia Payne-Gaposchkin révolutionne la compréhension de l'univers : 
+                dans sa thèse de doctorat à Harvard, elle démontre que les étoiles sont principalement 
+                composées d'hydrogène et d'hélium.
+            </p>
+            <p>
+                Ses travaux marquent un tournant majeur dans l'astrophysique moderne, ouvrant la voie 
+                à une nouvelle compréhension de la composition et de la formation des étoiles.
+            </p>
+        </section>
 
-        <section class="section section--projects">
-            <div class="section__header">
-                <h2 class="section__title">À découvrir.</h2>
+        <section class="section bio-atoms">
+            <div class="atom-container">
+                <img src="../assets/img/hydrogen.webp" alt="Atome d'Hydrogène" class="atom-img">
+
+                <img src="../assets/img/helium.webp" alt="Atome d'Hélium" class="atom-img">
             </div>
+        </section>
 
-            <div class="carousel">
-                
-                <a href="lachercheuse.html" class="carousel__link">
-                    <img class="carousel__img" src="../assets/img/lachercheuse.webp" alt="Projet La Chercheuse">
-                </a>
-                
-                <a href="leschercheusesdanslaliterrature.html" class="carousel__link">
-                    <img class="carousel__img" src="../assets/img/literrature.webp" alt="Projet Littérature">
-                </a>
-                
-                <a href="sathéorie.html" class="carousel__link">
-                    <img class="carousel__img" src="../assets/img/sathéorie.webp" alt="Projet Sa Théorie">
-                </a>
-                
-                <a href="lesfilms.html" class="carousel__link">
-                    <img class="carousel__img" src="../assets/img/lesfilms.webp" alt="Projet Films">
-                </a>
-                
-                <a href="figuresfémininesoubliées.html" class="carousel__link">
-                    <img class="carousel__img" src="../assets/img/figuresfémininesoubliées.webp" alt="Projet Figures Oubliées">
-                </a>
+        <section class="section bio-spectro">
+            <p class="bio-text__paragraph">
+                Cecilia Payne découvre la composition des étoiles grâce à la spectroscopie, 
+                en analysant leur lumière et les lignes spectrales observées avec les instruments 
+                de l'observatoire de Harvard.
+            </p>
+            
+        <figure class="spectro-figure">
+    
+            <figcaption>
+                <span class="spectro-main-title">Schéma.</span>
+                <span class="spectro-sub-title">Spectre lumineux.</span>
+            </figcaption>
+    
+            <img src="../assets/img/schéma page 1.webp" alt="Schéma du spectre lumineux" class="spectro-img">
+        </figure>
 
-            </div>
-             </section>
+        </section>
 
-    </main>
+        <section class="section bio-matilda">
+            <h2 class="bio-section-title">L'effet Matilda.</h2>
+    
+            <p>
+              Bien que Cecilia Payne ait formulé la découverte en premier, son travail fut d'abord 
+              rejeté ou attribué à son mentor, l'astronome Henry Norris Russell, qui obtint la 
+              reconnaissance publique avant elle.
+            </p>
+    
+            <p>
+               Cet épisode illustre parfaitement <strong>l'effet Matilda</strong>, un terme qui désigne la tendance 
+               à minimiser ou à attribuer à des hommes les découvertes réalisées par des femmes scientifiques.
+               Des décennies plus tard, Russell reconnut publiquement qu'elle avait raison depuis le début.
+            </p>
+        </section>
 
-    <footer class="footer">
+        <footer class="footer">
         <div class="footer__container">
         
             <div class="footer__logo">
