@@ -1,6 +1,6 @@
 /* src/css/components/menu.css */
 
-/* --- LE BOUTON BURGER --- */
+/* --- LE BOUTON BURGER (Reste au-dessus) --- */
 .menu-btn {
     background: none;
     border: none;
@@ -11,49 +11,100 @@
     width: 30px;
     height: 20px;
     padding: 0;
-    z-index: 1001; /* Doit être au-dessus du menu ouvert */
+    z-index: 1001; /* Toujours au-dessus du menu */
 }
 
 .menu-btn__bar {
     display: block;
     width: 100%;
     height: 2px;
-    background-color: var(--color-text); /* Blanc */
+    background-color: var(--color-text);
     border-radius: 2px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s;
 }
 
-/* --- LE MENU (La liste des liens) --- */
+/* --- LE MENU FULLSCREEN --- */
 .menu {
-    /* Prend tout l'écran */
     position: fixed;
-    inset: 0; /* Raccourci pour top:0, right:0, bottom:0, left:0 */
-    background-color: var(--color-bg); /* Fond noir */
+    inset: 0; /* Prend tout l'écran */
+    background-color: var(--color-bg); /* Noir */
+    z-index: 1000;
     
-    /* Centre le contenu */
+    /* Pour scroller si le menu est trop long sur petit écran */
+    overflow-y: auto;
+    
+    /* Animation d'apparition */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    opacity: 1;
+    visibility: visible;
+
+    /* Mise en page interne */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: var(--space-xl);
-    
-    /* Transition fluide */
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    justify-content: flex-start; /* On commence du haut */
+    padding-top: 65px; /* Espace pour ne pas être sous le header */
+    padding-left: 30px; /* Alignement à gauche comme le reste du site */
 }
 
-/* État caché (par défaut via l'attribut 'hidden' dans le HTML) */
+/* État caché */
 .menu[hidden] {
-    display: none; /* Ou opacity: 0; pointer-events: none; pour l'animer */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
-/* Style des liens dans le menu */
-.menu__link {
-    font-size: 1.5rem;
-    font-weight: 600;
+/* Le conteneur interne */
+.menu__container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* --- LE TITRE "Menu." --- */
+.menu__title {
+    font-size: 2.5rem; /* Assez gros */
+    font-weight: 400;  /* Pas trop gras selon l'image */
+    margin-bottom: 20px;
     color: var(--color-text);
 }
 
+/* --- LA LISTE --- */
+.menu__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espace entre les liens */
+}
+
+.menu__link {
+    font-size: 1.2rem;
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
 .menu__link:hover {
-    color: var(--color-text-light);
+    color: #cccccc; /* Gris au survol */
+}
+
+/* Petit espace supplémentaire avant "Contact" si tu veux séparer les groupes */
+.menu__item--spacer {
+    margin-top: 20px;
+}
+
+.menu-btn[aria-expanded="true"] .menu-btn__bar:nth-child(2) {
+    opacity: 0;
+}
+
+/* 2. La barre du haut descend et pivote à 45° */
+.menu-btn[aria-expanded="true"] .menu-btn__bar:nth-child(1) {
+    /* 9px correspond à la moitié de la hauteur du bouton (20px) moins un peu d'épaisseur */
+    transform: translateY(9px) rotate(45deg);
+}
+
+/* 3. La barre du bas monte et pivote à -45° */
+.menu-btn[aria-expanded="true"] .menu-btn__bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
 }

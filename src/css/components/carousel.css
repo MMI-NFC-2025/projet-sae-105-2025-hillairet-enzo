@@ -10,13 +10,13 @@
 /* --- 2. LE TITRE ET LA DESCRIPTION --- */
 .section__header {
     /* On aligne le texte avec le reste du site */
-    padding-left: var(--space-xl);
-    padding-right: var(--space-xl);
+    padding-left: 10px;
+    padding-right: 10px;
     margin-bottom: 0;
 }
 
 .section__title {
-    font-size: 3rem; /* Taille H2 */
+    font-size: 2.5rem; /* Taille H2 */
     font-weight: 700;
     color: var(--color-text);
     margin-bottom: 10px;
@@ -40,7 +40,7 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory; 
     
-    padding: 30px 7.5vw; 
+    padding: 30px 10px; 
     margin-top: -20px;
     margin-bottom: 60px;
         

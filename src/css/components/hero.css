@@ -17,14 +17,11 @@
     /* Plus de padding ni de flexbox nécessaire ici */
 }
 
-/* --- LA SECTION DE CONTENU EN DESSOUS --- */
 .intro {
     /* --- CHANGEMENT ICI --- */
-    /* Avant c'était -100px. On met 0 pour que ça commence normalement en dessous. */
     margin-top: 0; 
     
-    /* On garde de l'espace à l'intérieur pour aérer */
-    padding: var(--space-xl);
+    padding: var(--space-xl) 10px;
     
     /* Le reste pour la mise en page */
     display: flex;
@@ -37,7 +34,7 @@
 
 /* Le texte */
 .intro__title {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     line-height: 1.1;
     margin-bottom: var(--space-md);
     color: var(--color-text);
@@ -61,7 +58,8 @@
     font-weight: 600; 
     
     /* On enlève le soulignement par défaut (ou laisse-le si tu préfères) */
-    text-decoration: none; 
+    text-decoration: underline;
+    text-underline-offset: 3px; 
     
     /* Petit espace avant le lien pour ne pas coller au dernier mot */
     margin-left: 5px;
@@ -70,9 +68,4 @@
     transition: color 0.2s ease;
 }
 
-/* Au survol de la souris */
-.intro__link:hover {
-    color: #007BFF;/* Bleu plus foncé */
-    text-decoration: underline; /* Souligne quand on passe dessus */
-    cursor: pointer;
-}
+
