@@ -1,0 +1,246 @@
+/* src/css/pages/leschercheusesdanslaliterrature.css */
+
+/* =========================================
+   1. HEADER ET TITRE PRINCIPAL
+   ========================================= */
+
+.lit-header {
+    padding-top: 80px; 
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.lit-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #ffffff;
+}
+
+.lit-subtitle-hero {
+    font-size: 1.4rem;
+    color: var(--color-text-light);
+    font-weight: 400;
+    margin-top: 5px;      
+    margin-bottom: 30px; 
+    line-height: 1.2;
+}
+
+.lit-intro-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ffffff;
+    max-width: 65ch;
+    margin-top: 0;
+}
+
+/* =========================================
+   2. TITRES DE SECTIONS
+   ========================================= */
+
+.lit-section-title {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    padding-left: 10px; 
+}
+
+/* =========================================
+   3. SECTION LIVRES (TON NOUVEAU CARROUSEL)
+   ========================================= */
+
+.lit-books {
+    padding-top: 0;
+    /* On laisse le padding du carrousel gérer l'alignement */
+}
+
+/* --- LE CARROUSEL (Ton code intégré) --- */
+.carousel {
+    display: flex;
+    gap: 20px; /* Espace entre les images */
+    
+    /* Défilement */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; 
+    
+    /* Padding demandé */
+    padding: 10px 10px 30px 10px; 
+    
+    /* J'ai mis 0 au lieu de -20px pour éviter que ça chevauche ton titre "Exemples" */
+    margin-top: -10px; 
+    margin-bottom: 60px;
+        
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; 
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* --- LES CARTES (Version Mobile) --- */
+.carousel__link {
+    flex: 0 0 auto;
+    
+    /* Mobile : prend presque toute la largeur (Ton choix) */
+    width: 85vw; 
+    
+    /* Mobile : s'aligne au CENTRE de l'écran */
+    scroll-snap-align: center; 
+    
+    background: transparent;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+/* --- L'IMAGE --- */
+.carousel__img {
+    width: 100%;
+    height: auto; /* S'adapte à la largeur */
+    display: block; 
+    /* Utilise 8px si la variable n'existe pas, sinon garde var(--radius-md) */
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* Une ombre sympa pour le relief */
+}
+
+/* Effet de clic */
+.carousel__link:active {
+    transform: scale(0.95); 
+    transition: transform 0.1s; 
+}
+
+/* --- VERSION ORDINATEUR (INDISPENSABLE) --- */
+/* Sans ça, tes livres feront 85% de l'écran sur PC (gigantesques !) */
+@media (min-width: 768px) {
+    .carousel__link {
+        width: auto; /* On laisse l'image décider de la largeur */
+        scroll-snap-align: start; /* On aligne à gauche, pas au centre */
+    }
+
+    .carousel__img {
+        height: 400px; /* Hauteur fixe confortable sur ordi */
+        width: auto;
+    }
+}
+
+
+/* =========================================
+   4. AUTRES SECTIONS (Citation, Frise...)
+   ========================================= */
+
+.lit-conclusion {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+.lit-quote {
+    padding: 0 10px;
+    margin: 60px 0;
+}
+
+.quote-block {
+    border-left: 4px solid white;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.quote-text {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: white;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.quote-footer {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    color: var(--color-text-light);
+}
+
+.quote-author {
+    font-weight: 700;
+    color: white;
+}
+
+/* Frise Chronologique */
+.lit-timeline {
+    padding: 0 10px;
+    margin-bottom: 80px;
+}
+
+.lit-subtitle {
+    font-size: 1.4rem;
+    color: var(--color-text-light);
+    margin-top: -10px;
+    margin-bottom: 30px;
+    padding-left: 10px;
+}
+
+.timeline-intro {
+    padding-left: 10px;
+    margin-bottom: 40px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-left: 2px solid var(--color-text-light);
+    margin-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 40px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.timeline-date {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.timeline-name {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+}
+
+/* Fix footer alignement */
+.footer__left-group {
+    padding-left: 10px;
+    text-align: left;
+}
+.footer__desc {
+    margin-left: 0;
+    padding-left: 0;
+}

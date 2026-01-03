@@ -29,3 +29,48 @@ function closeMenu() {
   menu.setAttribute("hidden", "");
   document.body.style.overflow = ""; // Réactive le scroll
 }
+
+/* src/js/script.js (À ajouter à la fin) */
+
+/* --- LOGIQUE CARROUSEL --- */
+const carousels = document.querySelectorAll('.carousel');
+
+carousels.forEach(carousel => {
+    const container = carousel.querySelector('.carousel__container');
+    const slides = carousel.querySelectorAll('.carousel__slide');
+    const nextBtn = carousel.querySelector('.carousel__btn--next');
+    const prevBtn = carousel.querySelector('.carousel__btn--prev');
+    const indicators = carousel.querySelectorAll('.carousel__indicator');
+    
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        // Déplace le conteneur
+        const width = slides[0].getBoundingClientRect().width;
+        container.style.transform = `translateX(-${currentIndex * width}px)`;
+        
+        // Met à jour les points
+        indicators.forEach((dot, index) => {
+            dot.classList.toggle('current', index === currentIndex);
+        });
+    }
+
+    if(nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            currentIndex++;
+            if (currentIndex >= slides.length) currentIndex = 0;
+            updateCarousel();
+        });
+    }
+
+    if(prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            currentIndex--;
+            if (currentIndex < 0) currentIndex = slides.length - 1;
+            updateCarousel();
+        });
+    }
+    
+    // Gère le redimensionnement de la fenêtre
+    window.addEventListener('resize', updateCarousel);
+});
