@@ -1,0 +1,258 @@
+/* src/css/pages/lesfilms.css */
+
+/* =========================================
+   1. HEADER ET TITRE PRINCIPAL
+   ========================================= */
+
+.films-header {
+    padding-top: 80px; 
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.films-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #ffffff;
+}
+
+.subtitle-hero {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--color-text-light, #cccccc);
+    font-weight: 400;
+    margin-top: 5px;      
+    margin-bottom: 30px; 
+    line-height: 1.2;
+}
+
+/* Bloc d'intro (2 paragraphes) */
+.films-intro-block {
+    padding-left: 0;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ffffff;
+    max-width: 65ch;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   2. TITRES DE SECTIONS
+   ========================================= */
+
+.section-title {
+    margin-top: 0px; 
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    padding-left: 10px; 
+    border: none !important;
+}
+
+/* =========================================
+   3. SECTION EXEMPLES (CAROUSEL)
+   ========================================= */
+
+.films-examples {
+    padding-top: 0;
+    margin-bottom: 60px;
+}
+
+/* --- LE CAROUSEL --- */
+.carousel {
+    display: flex;
+    gap: 20px; 
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; 
+    
+    /* Padding réduit en bas pour coller au texte */
+    padding: 10px 10px 10px 10px; 
+    
+    margin-top: -10px;
+    margin-bottom: 0;
+        
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* --- LES CARTES (Grands formats) --- */
+.carousel__link {
+    flex: 0 0 auto;
+    
+    /* Largeur Mobile : 85% de l'écran */
+    width: 85vw; 
+    
+    scroll-snap-align: center;
+    background: transparent;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+/* Sécurité Desktop : On limite la largeur sur grand écran pour éviter le géant */
+@media (min-width: 768px) {
+    .carousel__link {
+        width: 300px; 
+    }
+}
+
+/* --- L'IMAGE (Affiche) --- */
+.carousel__img {
+    width: 100%;
+    height: auto; /* Hauteur auto pour respecter le ratio de l'image */
+    object-fit: cover;
+    display: block; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.carousel__link:active {
+    transform: scale(0.95); 
+}
+
+.carousel__link:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   4. TEXTE EXPLICATIF (Sous le Carousel)
+   ========================================= */
+
+.films-summaries {
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    /* C'EST ICI : On colle le texte au carousel */
+    margin-top: 0px; 
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.film-summary-item {
+    margin-bottom: 0;
+}
+
+.summary-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ffffff;
+    margin: 0;
+    max-width: 65ch;
+}
+
+/* Conclusion de la section */
+.films-conclusion {
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    /* C'EST ICI : On remonte la conclusion */
+    margin-top: 0px;
+    
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+.films-conclusion p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text, #cccccc);
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   5. SECTION BANDE ANNONCE (VIDÉO)
+   ========================================= */
+
+.films-trailer {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 80px;
+    
+    /* Remonte le bloc vers le haut */
+    margin-top: -40px;
+}
+
+.quote-subtitle {
+    font-size: 1.4rem;
+    color: var(--color-text-light, #cccccc);
+    font-weight: 400;
+    
+    margin-top: -30px;
+    margin-bottom: 20px;
+    
+    padding-left: 10px; 
+    padding-right: 10px;
+}
+
+.trailer-container {
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    /* On limite la largeur de la vidéo sur PC */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- LE LECTEUR RESPONSIVE (NOUVEAU) --- */
+/* Ce bloc gère l'iframe YouTube pour qu'elle s'adapte à l'écran */
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* Ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+    
+    /* C'EST ICI : On ajoute le cadre blanc de 4 pixels */
+    border: 4px solid #ffffff; 
+    
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    background-color: black;
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* =========================================
+   6. RESET GLOBAL & FOOTER
+   ========================================= */
+
+.section {
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+.footer__left-group {
+    padding-left: 10px;
+    text-align: left;
+}
+.footer__desc {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.footer {
+    background-color: #000000;
+    color: #ffffff;
+}
