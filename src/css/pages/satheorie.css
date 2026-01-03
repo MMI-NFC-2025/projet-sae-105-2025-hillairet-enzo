@@ -1,0 +1,126 @@
+/* src/css/pages/satheorie.css */
+
+/* =========================================
+   1. GLOBAL & RESET
+   ========================================= */
+
+.section, 
+.theory-content {
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+/* =========================================
+   2. HEADER HERO (Titre principal)
+   ========================================= */
+
+.theory-header {
+    padding-top: 80px; 
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0 !important; 
+}
+
+.theory-title {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #ffffff;
+}
+
+.subtitle-hero {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--color-text-light);
+    font-weight: 400;
+    line-height: 1.2;
+    
+    /* Espace entre le sous-titre et le premier paragraphe */
+    margin-bottom: 30px !important; 
+}
+
+/* =========================================
+   3. SECTION CONTENU (Texte + Images)
+   ========================================= */
+
+.theory-content {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 60px;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* --- CONTENEUR PRINCIPAL --- */
+.grid-2-col {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- TYPOGRAPHIE --- */
+.theory-text-col p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 15px; 
+    margin-top: 0;
+}
+
+/* --- IMAGE DU MILIEU (Celle qui manquait) --- */
+.theory-middle-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    
+    /* Espace au-dessus */
+    margin-top: 20px; 
+    
+    /* C'EST ICI : Espace entre l'image et le texte du dessous */
+    margin-bottom: 20px; 
+    
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* =========================================
+   4. TITRE "SCHÉMA" ET IMAGE DU BAS
+   ========================================= */
+
+/* Le titre "Schéma" */
+.theory-bottom-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    
+    text-align: left; 
+    
+    /* Collé au texte du dessus (modifier si tu veux de l'espace) */
+    margin-top: 0px; 
+    
+    margin-bottom: 0px; 
+    line-height: 1.2;
+}
+
+/* L'image du Schéma en bas */
+.theory-bottom-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    
+    max-width: 350px; 
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* Remonte vers le titre */
+    margin-top: -10px; 
+    
+    margin-bottom: 0px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
