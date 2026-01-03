@@ -42,7 +42,7 @@
    ========================================= */
 
 .lit-section-title {
-    margin-top: 0px;
+    margin-top: 0px; /* Collé au bloc du dessus */
     margin-bottom: 20px;
     font-size: 2.5rem;
     font-weight: 700;
@@ -51,29 +51,26 @@
 }
 
 /* =========================================
-   3. SECTION LIVRES (TON NOUVEAU CARROUSEL)
+   3. SECTION LIVRES (CARROUSEL)
    ========================================= */
 
 .lit-books {
     padding-top: 0;
-    /* On laisse le padding du carrousel gérer l'alignement */
 }
 
-/* --- LE CARROUSEL (Ton code intégré) --- */
+/* --- LE CARROUSEL --- */
 .carousel {
     display: flex;
-    gap: 20px; /* Espace entre les images */
+    gap: 20px; 
     
     /* Défilement */
     overflow-x: auto;
     scroll-snap-type: x mandatory; 
     
-    /* Padding demandé */
+    /* Padding et Marges */
     padding: 10px 10px 30px 10px; 
-    
-    /* J'ai mis 0 au lieu de -20px pour éviter que ça chevauche ton titre "Exemples" */
-    margin-top: -10px; 
-    margin-bottom: 60px;
+    margin-top: -10px; /* Remonte vers le titre */
+    margin-bottom: 0;
         
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none; 
@@ -83,15 +80,11 @@
     display: none;
 }
 
-/* --- LES CARTES (Version Mobile) --- */
+/* --- LES CARTES (Mobile) --- */
 .carousel__link {
     flex: 0 0 auto;
-    
-    /* Mobile : prend presque toute la largeur (Ton choix) */
-    width: 85vw; 
-    
-    /* Mobile : s'aligne au CENTRE de l'écran */
-    scroll-snap-align: center; 
+    width: 85vw; /* Largeur mobile */
+    scroll-snap-align: center; /* Centré sur mobile */
     
     background: transparent;
     text-decoration: none;
@@ -101,36 +94,58 @@
 /* --- L'IMAGE --- */
 .carousel__img {
     width: 100%;
-    height: auto; /* S'adapte à la largeur */
+    height: auto;
     display: block; 
-    /* Utilise 8px si la variable n'existe pas, sinon garde var(--radius-md) */
     border-radius: 8px; 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* Une ombre sympa pour le relief */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
 
-/* Effet de clic */
 .carousel__link:active {
     transform: scale(0.95); 
     transition: transform 0.1s; 
 }
 
-/* --- VERSION ORDINATEUR (INDISPENSABLE) --- */
-/* Sans ça, tes livres feront 85% de l'écran sur PC (gigantesques !) */
-@media (min-width: 768px) {
-    .carousel__link {
-        width: auto; /* On laisse l'image décider de la largeur */
-        scroll-snap-align: start; /* On aligne à gauche, pas au centre */
-    }
-
-    .carousel__img {
-        height: 400px; /* Hauteur fixe confortable sur ordi */
-        width: auto;
-    }
-}
-
 
 /* =========================================
-   4. AUTRES SECTIONS (Citation, Frise...)
+   4. SECTION RÉSUMÉS (Texte sous les livres)
+   ========================================= */
+
+.book-summaries {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 0; 
+}
+
+.book-summary-item {
+    margin-bottom: 20px;
+}
+
+.summary-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.summary-author {
+    display: block;
+    font-size: 1rem;
+    color: #878080; /* Gris */
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.summary-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ffffff;
+    margin: 0;
+    max-width: 65ch;
+}
+
+/* =========================================
+   5. AUTRES SECTIONS (Conclusion, Citation...)
    ========================================= */
 
 .lit-conclusion {
@@ -142,84 +157,186 @@
     color: var(--color-text);
 }
 
+.lit-conclusion p {
+    margin-bottom: 40px;
+}
+
+.lit-conclusion p:last-child {
+    margin-bottom: 0;
+}
+
 .lit-quote {
-    padding: 0 10px;
-    margin: 60px 0;
+    /* CORRECTION : On met 0 ici pour que le titre (qui a déjà 10px) soit bien placé */
+    padding-left: 0;
+    padding-right: 0;
+    
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
-.quote-block {
-    border-left: 4px solid white;
-    padding-left: 20px;
-    margin: 0;
-}
-
-.quote-text {
-    font-size: 1.5rem;
-    font-style: italic;
-    color: white;
-    margin-bottom: 15px;
-    line-height: 1.4;
-}
-
-.quote-footer {
-    display: flex;
-    flex-direction: column;
-    font-size: 1rem;
+/* Le sous-titre "Margot Lee Shetterly" */
+.quote-subtitle {
+    font-size: 1.4rem;
     color: var(--color-text-light);
+    font-weight: 400;
+    
+    margin-top: -30px;
+    margin-bottom: 20px;
+    
+    /* On ajoute le padding ici pour le texte */
+    padding-left: 10px; 
+    padding-right: 10px;
 }
 
-.quote-author {
-    font-weight: 700;
-    color: white;
+/* Conteneur de l'image (pour gérer les marges) */
+.quote-img-container {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-/* Frise Chronologique */
+/* L'image elle-même */
+.quote-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    display: block;
+}
+
+/* src/css/pages/leschercheusesdanslaliterrature.css */
+
+/* --- 4. FRISE CHRONOLOGIQUE --- */
+
 .lit-timeline {
-    padding: 0 10px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0; 
+    padding-top: 0;
     margin-bottom: 80px;
 }
 
 .lit-subtitle {
     font-size: 1.4rem;
     color: var(--color-text-light);
-    margin-top: -10px;
+    margin-top: -20px;
     margin-bottom: 30px;
     padding-left: 10px;
 }
 
-.timeline-intro {
+/* Texte d'intro */
+.timeline-intro-block {
     padding-left: 10px;
+    padding-right: 10px;
     margin-bottom: 40px;
+}
+
+.timeline-intro-block p {
     font-size: 1rem;
     line-height: 1.6;
     color: #cccccc;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.timeline-intro-block p:last-child {
+    margin-bottom: 0;
 }
 
 .timeline-container {
+    /* --- AJOUT IMPORTANT --- */
+    position: relative; /* Nécessaire pour positionner la flèche par rapport à ce bloc */
+    
     display: flex;
     flex-direction: column;
-    gap: 0;
-    border-left: 2px solid var(--color-text-light);
+    
+    /* La ligne verticale */
+    border-left: 2px solid var(--color-text-light); 
+    
     margin-left: 20px;
     padding-top: 10px;
-    padding-bottom: 10px;
+    
+    /* On augmente un peu l'espace en bas pour que la flèche ne touche pas le dernier cadre */
+    padding-bottom: 30px; 
+}
+
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    
+    /* Positionnement tout en bas de la ligne */
+    bottom: 0; 
+    
+    /* CALCUL POUR CENTRER LA FLÈCHE SUR LA LIGNE DE 2PX :
+       Largeur flèche (12px) / 2 = 6px
+       Moitié de la ligne (1px)
+       -6px + 1px = -5px 
+    */
+    left: -7px; 
+    
+    /* DESSIN DU TRIANGLE EN CSS */
+    width: 0; 
+    height: 0; 
+    border-left: 6px solid transparent;  /* Côté transparent */
+    border-right: 6px solid transparent; /* Côté transparent */
+    
+    /* Le haut du triangle (qui pointe vers le bas) prend la couleur de ta ligne */
+    border-top: 12px solid white; 
 }
 
 .timeline-item {
     position: relative;
-    padding-left: 30px;
-    margin-bottom: 40px;
+    padding-left: 30px; /* L'espace occupé par le trait de liaison */
+    margin-bottom: 20px;
 }
 
 .timeline-item::before {
     content: '';
     position: absolute;
-    left: -6px;
-    top: 5px;
+    left: -6px; /* Centré sur la ligne verticale */
+    top: 50%; 
+    transform: translateY(-50%);
+    
     width: 10px;
     height: 10px;
     background-color: white;
     border-radius: 50%;
+    
+    /* Z-index élevé pour que le point passe PAR DESSUS le trait */
+    z-index: 2; 
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    left: 0;       /* Part de la ligne verticale */
+    top: 50%;      /* Centré verticalement */
+    transform: translateY(-50%); /* Ajustement fin du centrage */
+    
+    width: 30px;   /* Longueur du trait (touche le cadre) */
+    height: 1px;   /* Épaisseur du trait (fin et élégant) */
+    background-color: white;
+    
+    z-index: 1;    /* En dessous du point rond */
+}
+
+/* --- LE NOUVEAU CADRE BLANC --- */
+.timeline-card {
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 15px;
+    
+    background-color: rgba(0, 0, 0, 0.05); 
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* --- CHANGEMENTS ICI --- */
+    /* 1. On fixe une taille pour que tout soit aligné verticalement */
+    width: 260px; 
+    
+    /* 2. Sécurité pour les très petits écrans (pour ne pas dépasser) */
+    max-width: 70vw; 
 }
 
 .timeline-date {
@@ -232,7 +349,7 @@
 
 .timeline-name {
     font-size: 1.1rem;
-    color: var(--color-text-light);
+    color: #cccccc; /* Gris clair */
 }
 
 /* Fix footer alignement */
@@ -243,4 +360,20 @@
 .footer__desc {
     margin-left: 0;
     padding-left: 0;
+}
+
+.section, .lit-books, .lit-quote, .lit-timeline {
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+/* Enlève le trait au-dessus des titres */
+.lit-section-title {
+    border: none !important;
+    text-decoration: none !important;
+}
+
+/* Si le trait venait des résumés de livres */
+.book-summary-item {
+    border-bottom: none !important;
 }
