@@ -1,0 +1,92 @@
+/* src/css/pages/projets.css */
+
+/* --- EN-TÊTE --- */
+.projects-header {
+    padding-top: 80px; 
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.projects-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.projects-intro p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #cccccc;
+    margin-top: 0;
+    margin-bottom: 40px;
+    max-width: 800px;
+}
+
+/* --- LISTE DES PROJETS --- */
+.projects-list-section {
+    /* Le conteneur a déjà 10px de marge sur les côtés */
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    margin-bottom: 60px;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    max-width: 600px; 
+    margin-left: auto;
+    margin-right: auto;
+    /* On s'assure que la liste prend toute la largeur dispo */
+    width: 100%; 
+}
+
+/* --- CARTE PROJET --- */
+.project-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: #ffffff; 
+    border: 1px solid #cccccc;
+    border-radius: 25px; 
+    
+    /* MODIFICATION : On prend 100% de l'espace du parent (qui est déjà à 10px du bord) */
+    width: 100% !important;
+    
+    /* Très important pour que le padding ne dépasse pas */
+    box-sizing: border-box; 
+    
+    margin-left: auto;
+    margin-right: auto;
+    
+    padding: 15px 20px;
+    
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.project-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000000;
+    margin: 0;
+}
+
+.project-arrow {
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: 300;
+}

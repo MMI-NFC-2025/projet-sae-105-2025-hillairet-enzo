@@ -1,0 +1,67 @@
+/* src/css/pages/glossaire.css */
+
+/* --- EN-TÊTE --- */
+.glossary-header {
+    padding-top: 80px; 
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.glossary-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 1.1;
+}
+
+.subtitle-hero {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--color-text-light, #cccccc);
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 10px; /* Collé au contenu comme demandé précédemment */
+    line-height: 1.2;
+}
+
+/* --- LISTE DES DÉFINITIONS --- */
+.glossary-content {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 60px;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.glossary-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espace entre chaque définition */
+    max-width: 800px;
+}
+
+.glossary-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Le mot à définir (ex: Effet Matilda) */
+.glossary-term {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* La définition */
+.glossary-def {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #cccccc; /* Gris clair pour différencier du titre */
+    margin: 0;      /* Enlève la marge par défaut des <dd> */
+    max-width: 70ch;
+}
