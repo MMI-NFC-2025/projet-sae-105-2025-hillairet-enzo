@@ -3,27 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hidden Stars - Cecilia Payne Gaposchkin</title>
-    <meta name="description" content="Discover Cecilia Payne-Gaposchkin, the forgotten astrophysicist who discovered the composition of stars.">
-
+    <title>Hidden Stars - About</title>
+    
     <link rel="stylesheet" href="../src/css/style.css">
-
+    <link rel="stylesheet" href="../src/css/pages/apropos.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
     <link rel="icon" type="image/webp" href="../assets/img/logo-favicon.webp">
 </head>
-
 <body>
 
     <header class="header">
-        <a href="home-en.html" class="header__link" aria-label="Back to top">
+        <a href="home-en.html" class="header__link">
             <img class="header__logo" src="../assets/img/logo.webp" alt="Hidden Stars Logo">
         </a>
-        
+
         <div class="header__lang">
-            <a href="../fr/index.html" class="lang-link">FR</a>
+            <a href="../fr/apropos.html" class="lang-link">FR</a>
             <span class="lang-sep">|</span>
             <a href="#" class="lang-link active">EN</a>
         </div>
@@ -33,11 +32,10 @@
             <span class="menu-btn__bar"></span>
             <span class="menu-btn__bar"></span>
         </button>
-
+        
         <nav id="main-menu" class="menu" hidden>
             <div class="menu__container">
                 <h2 class="menu__title">Menu.</h2>
-
                 <ul class="menu__list">
                     <li class="menu__item"><a class="menu__link" href="lachercheuse-en.html">The Researcher.</a></li>
                     <li class="menu__item"><a class="menu__link" href="leschercheusesdanslaliterrature-en.html">Literature.</a></li>
@@ -46,7 +44,7 @@
                     <li class="menu__item"><a class="menu__link" href="figuresfemininesoubliees-en.html">Forgotten Figures.</a></li>
             
                     <li class="menu__item menu__item--spacer"><a class="menu__link" href="contact-en.html">Contact.</a></li>
-                    <li class="menu__item"><a class="menu__link" href="apropos-en.html">About.</a></li>
+                    <li class="menu__item"><a class="menu__link active" href="apropos-en.html">About.</a></li>
                     <li class="menu__item"><a class="menu__link" href="glossaire-en.html">Glossary.</a></li>
                     <li class="menu__item"><a class="menu__link" href="projets-en.html">Other Projects.</a></li>
                 </ul>
@@ -55,94 +53,64 @@
     </header>
 
     <main class="main-content">
+        <section class="about-header">
+            <div class="container">
+                <h1 class="about-title">About.</h1>
+                <p class="subtitle-hero">My Project.</p>
+            </div>
+        </section>
 
-        <section class="hero"></section>
-
-        <section class="intro">
-            <div class="intro__content">
-                <h1 class="intro__title">Cecilia Payne Gaposchkin</h1>
-
-                <p class="intro__description">
-                    Cecilia Payne-Gaposchkin was the first astrophysicist to demonstrate that 
-                    stars are composed of hydrogen and helium.
-                </p>
-                    
+        <section class="section about-content">
+            <div class="container">
                 <p>
-                    A discovery ignored in her time, but essential for our understanding of the universe.
-                    <a href="lachercheuse.html" class="intro__link">Learn more +</a>
+                    My name is Enzo, and this project aims to highlight the journey of Cecilia Payne-Gaposchkin, 
+                    a forgotten pioneer of astrophysics, as well as the phenomenon of the Matilda Effect, 
+                    which refers to the minimization of discoveries made by women.
+                </p>
+                <p>
+                    Through this site, I wanted to rehabilitate these female figures of science too often erased 
+                    from history, by combining research, popularization, and pop culture (movies, books, series).
+                </p>
+                <p>
+                    My approach is based on a desire to make science fairer and more accessible, 
+                    while recalling that major discoveries are not the result of a single gender, but of a collective effort.
+                </p>
+                <p>
+                    This project is both a tribute and a realization: understanding the past to better recognize 
+                    the women of science of today and tomorrow.
                 </p>
             </div>
         </section>
-
-
-        <section class="section section--projects">
-            <div class="section__header">
-                <h2 class="section__title">Discover.</h2>
-            </div>
-
-            <div class="carousel">
-                <a href="lachercheuse.html" class="carousel__link">
-                    <img class="carousel__img" src="../assets/img/lachercheuse.webp" alt="The Researcher">
-                </a>
-                
-                <a href="leschercheusesdanslaliterrature.html" class="carousel__link">
-                    <img class="carousel__img" src="../assets/img/literrature.webp" alt="Literature">
-                </a>
-                
-                <a href="satheorie.html" class="carousel__link">
-                    <img class="carousel__img" src="../assets/img/sathéorie.webp" alt="Her Theory">
-                </a>
-                
-                <a href="lesfilms.html" class="carousel__link">
-                    <img class="carousel__img" src="../assets/img/lesfilms.webp" alt="Movies">
-                </a>
-                
-                <a href="figuresfemininesoubliees.html" class="carousel__link">
-                    <img class="carousel__img" src="../assets/img/figuresfémininesoubliées.webp" alt="Forgotten Figures">
-                </a>
-            </div>
-        </section>
-
     </main>
 
     <footer class="footer">
         <div class="footer__container">
-        
             <div class="footer__logo">
                 <img src="../assets/img/logo.webp" alt="Hidden Stars Logo">
             </div>
-
             <nav class="footer__nav">
                 <ul class="footer__list">
                     <li><a href="mentions.html">Legal Notice</a></li>
                     <li><a href="contact.html">Contact Form</a></li>
-                    <li><a href="apropos.html">About</a></li>
-                    <li><a href="glossaire.html">Glossary</a></li>
-                    <li><a href="projets.html">Other Projects</a></li>
+                    <li><a href="apropos-en.html">About</a></li>
+                    <li><a href="glossaire-en.html">Glossary</a></li>
+                    <li><a href="projets-en.html">Other Projects</a></li>
                 </ul>
             </nav>
-
             <div class="footer__bottom">
                 <div class="footer__left-group">
-                    <p class="footer__desc">
-                        Project realized in 2025 as part of an educational exercise
-                    </p>
-
+                    <p class="footer__desc">Project realized in 2025 as part of an educational exercise</p>
                     <div class="footer__social">
                         <a href="https://instagram.com" target="_blank"><img src="../assets/img/instagram.webp" alt="Instagram"></a>
                         <a href="https://tiktok.com" target="_blank"><img src="../assets/img/tiktok.webp" alt="TikTok"></a>
                         <a href="https://twitter.com" target="_blank"><img src="../assets/img/twitter.webp" alt="X"></a>
                     </div>
                 </div>
-
-                <a href="#" class="footer__scroll-top" aria-label="Scroll to top">
-                     <img src="../assets/img/logo footer.webp" alt="MMI Logo" class="footer__big-img">
-                </a>
+                <a href="#" class="footer__scroll-top"><img src="../assets/img/logo footer.webp" alt="MMI Logo" class="footer__big-img"></a>
             </div>
         </div>
     </footer>
 
     <script type="module" src="../src/js/script.js"></script>
-
 </body>
 </html>

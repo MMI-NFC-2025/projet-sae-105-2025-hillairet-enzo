@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden Stars - Movies</title>
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/pages/lesfilms.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/webp" href="../assets/img/logo-favicon.webp">
+</head>
+<body>
+
+    <header class="header">
+        <a href="home-en.html" class="header__link">
+            <img class="header__logo" src="../assets/img/logo.webp" alt="Hidden Stars Logo">
+        </a>
+        
+        <div class="header__lang">
+            <a href="../fr/lesfilms.html" class="lang-link">FR</a>
+            <span class="lang-sep">|</span>
+            <a href="#" class="lang-link active">EN</a>
+        </div>
+
+        <button class="menu-btn" aria-label="Menu" aria-controls="main-menu" aria-expanded="false">
+            <span class="menu-btn__bar"></span>
+            <span class="menu-btn__bar"></span>
+            <span class="menu-btn__bar"></span>
+        </button>
+        <nav id="main-menu" class="menu" hidden>
+            <div class="menu__container">
+                <h2 class="menu__title">Menu.</h2>
+                <ul class="menu__list">
+                    <li class="menu__item"><a class="menu__link" href="lachercheuse-en.html">The Researcher.</a></li>
+                    <li class="menu__item"><a class="menu__link" href="leschercheusesdanslaliterrature-en.html">Literature.</a></li>
+                    <li class="menu__item"><a class="menu__link" href="satheorie-en.html">Her Theory.</a></li>
+                    <li class="menu__item"><a class="menu__link active" href="lesfilms-en.html">Movies.</a></li>
+                    <li class="menu__item"><a class="menu__link" href="figuresfemininesoubliees-en.html">Forgotten Figures.</a></li>
+                    <li class="menu__item menu__item--spacer"><a class="menu__link" href="contact-en.html">Contact.</a></li>
+                    <li class="menu__item"><a class="menu__link" href="apropos-en.html">About.</a></li>
+                    <li class="menu__item"><a class="menu__link" href="glossaire-en.html">Glossary.</a></li>
+                    <li class="menu__item"><a class="menu__link" href="projets-en.html">Other Projects.</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="section films-header">
+            <h1 class="films-title">Movies.</h1> 
+            <p class="subtitle-hero">Representation on screen.</p>
+            <div class="films-intro-block">
+                <p class="intro-text">
+                    Movies and series serve as powerful tools to make visible those female scientists 
+                    whose contributions have long been ignored.
+                </p>
+                <p class="intro-text">
+                    By telling their stories and discoveries, these works help fight against 
+                    invisibilization and share their history with a wide audience.
+                </p>
+            </div>
+        </section>
+
+        <section class="section films-examples">
+            <h2 class="section-title">Examples.</h2>
+            <div class="carousel" id="films-carousel">
+                <a href="https://letterboxd.com/film/cosmos-a-spacetime-odyssey/" class="carousel__link film-item" target="_blank">
+                    <img class="carousel__img" src="../assets/img/cosmos.webp" alt="Cosmos Poster">
+                </a>
+                <a href="https://letterboxd.com/film/picture-a-scientist/" class="carousel__link film-item" target="_blank">
+                    <img class="carousel__img" src="../assets/img/pictureascientist.webp" alt="Picture a Scientist Poster">
+                </a>
+                <a href="https://letterboxd.com/film/the-planets-2019-1/" class="carousel__link film-item" target="_blank">
+                    <img class="carousel__img" src="../assets/img/theplanets.webp" alt="The Planets Poster">
+                </a>
+                <a href="https://letterboxd.com/film/radioactive/" class="carousel__link film-item" target="_blank">
+                    <img class="carousel__img" src="../assets/img/radioactive.webp" alt="Radioactive Poster">
+                </a>
+            </div>
+
+            <div class="films-summaries">
+                <article class="film-summary-item">
+                    <p class="summary-desc">
+                        Documentaries and series like <em>Cosmos</em> or <em>The Planets</em> integrate female figures 
+                        into the history of science and astronomy, showing their role in major scientific discoveries.
+                    </p>
+                </article>
+                <article class="film-summary-item">
+                    <p class="summary-desc">
+                        The documentary <em>Picture a Scientist</em> highlights the obstacles encountered by 
+                        female researchers in the scientific world, while valuing their achievements and resilience.
+                    </p>
+                </article>
+                <article class="film-summary-item">
+                    <p class="summary-desc">
+                        Finally, <em>Radioactive</em> retraces the life and work of Marie Curie, offering a visual representation 
+                        of the impact of her discoveries on modern science.
+                    </p>
+                </article>
+            </div>
+
+            <div class="films-conclusion">
+                <p>
+                    These works contribute to rehabilitating the image of female scientists, inspiring new generations, 
+                    and reminding us that science has been shaped by female talents who often remained in the shadows.
+                </p>
+                <p>
+                    Integrating these films and series into education and popular culture allows us to correct history 
+                    and give women the recognition they deserve.
+                </p>
+            </div>
+        </section>
+
+        <section class="section films-trailer">
+            <h2 class="section-title">Trailer.</h2>
+            <p class="quote-subtitle">Radioactive</p>
+            <div class="trailer-container">
+                <div class="video-responsive">
+                    <iframe 
+                        width="560" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/lZJDg2A6odQ?si=QBj35u5mTfiisdtP" 
+                        title="Radioactive - Trailer" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="../src/js/script.js"></script>
+</body>
+</html>
