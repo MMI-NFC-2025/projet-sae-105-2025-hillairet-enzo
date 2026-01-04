@@ -1,0 +1,179 @@
+/* src/css/pages/contact.css */
+
+/* --- EN-TÊTE (Basé sur .bio-header) --- */
+.contact-header {
+    /* On garde l'espace du menu comme sur la page chercheuse */
+    padding-top: 80px; 
+    padding-bottom: 10px;
+    
+    /* Marges de sécurité latérales */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0;
+    line-height: 1.1;
+    margin-top: 0;
+}
+
+.subtitle-hero {
+    font-size: 1.4rem;
+    color: var(--color-text-light, #cccccc);
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* --- SECTION CONTENU --- */
+.contact-form-section {
+    /* Alignement identique aux textes de la bio */
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 60px;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.contact-intro {
+    color: #ffffff;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin-top: 0;
+    /* MODIFICATION : Petit espace entre les paragraphes de texte (au lieu de 40px) */
+    margin-bottom: 10px; 
+}
+
+/* ASTUCE : On cible le dernier paragraphe pour remettre le grand espace avant le formulaire */
+.contact-intro:last-of-type {
+    margin-bottom: 40px;
+}
+
+/* --- FORMULAIRE --- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 600px; 
+    /* On centre le formulaire lui-même si besoin */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Un peu d'espace entre le titre et la case */
+}
+
+.form-group label {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    
+    /* MODIFICATION ICI : On centre le titre (label) */
+    text-align: center; 
+    width: 100%;
+    display: block;
+}
+
+.form-group input, 
+.form-group textarea {
+    background-color: #ffffff; /* Fond blanc */
+    color: #000000; /* Texte noir */
+    border: 1px solid #cccccc;
+    
+    /* 1. PLUS RONDES : On augmente l'arrondi (25px donne un effet "pilule") */
+    border-radius: 25px; 
+    
+    padding: 15px 20px; /* Un peu plus d'espace sur les côtés pour le texte */
+    font-family: inherit;
+    font-size: 1rem;
+    
+    /* 2. 20PX DU BORD DE CHAQUE CÔTÉ :
+       On calcule la largeur totale moins 40px (20px à gauche + 20px à droite) */
+    width: calc(100% - 40px); 
+    
+    /* On centre la cellule pour répartir l'espace vide équitablement */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    box-sizing: border-box;
+}
+
+/* Au clic (focus) */
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: #000000;
+    background-color: #ffffff;
+}
+
+/* Ajustement spécifique pour le textarea pour qu'il reste joli avec les bords ronds */
+.form-group textarea {
+    border-radius: 20px; /* Un peu moins rond pour la grande zone de texte */
+}
+
+/* Pour le placeholder (le texte "Ex: Marie Curie") en gris */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888888;
+}
+
+.form-checkbox {
+    display: flex;
+    /* On aligne la case verticalement avec le texte */
+    align-items: center; 
+    gap: 12px;
+    color: #cccccc;
+    font-size: 0.85rem;
+    line-height: 1.4;
+
+    /* C'EST ICI : On applique la même largeur que les cases blanches pour l'aligner */
+    width: calc(100% - 40px); 
+    
+    /* On centre le bloc complet */
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* Optionnel : ajoute un peu d'espace avant le bouton */
+    margin-bottom: 10px; 
+}
+
+.form-checkbox input {
+    /* On grossit un peu la case pour qu'elle soit facile à cliquer */
+    transform: scale(1.2); 
+    cursor: pointer;
+    /* On enlève la marge du haut pour que l'alignement center fonctionne bien */
+    margin-top: 0; 
+}
+
+.submit-btn {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 15px 50px; /* Un peu plus large pour être élégant */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+    /* 1. PLUS ROND : On met le même arrondi que les inputs */
+    border-radius: 25px; 
+    
+    cursor: pointer;
+    
+    /* 2. CENTRAGE : Dans une colonne Flexbox, cela centre l'élément */
+    align-self: center; 
+    
+    margin-top: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.submit-btn:hover {
+    opacity: 0.8;
+}
