@@ -39,3 +39,45 @@
     /* On tire le logo vers la gauche pour annuler le vide de l'image ou du padding */
     margin-left: -15px; 
 }
+
+/* --- SÉLECTEUR DE LANGUE --- */
+
+/* Le conteneur des langues */
+.header__lang {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espace entre FR, | et EN */
+    
+    /* ASTUCE : C'est cette ligne qui pousse la langue (et le menu qui suit) 
+       tout à fait à droite de l'écran, collé au menu burger */
+    margin-left: auto; 
+    
+    /* Espace entre la langue et le menu burger */
+    margin-right: 20px; 
+}
+
+/* Le texte FR / EN */
+.lang-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #888888; /* Gris par défaut */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Au survol */
+.lang-link:hover {
+    color: #ffffff;
+}
+
+/* La langue active (celle de la page actuelle) */
+.lang-link.active {
+    color: #ffffff; /* Blanc brillant */
+    font-weight: 700;
+}
+
+/* Le petit séparateur "|" */
+.lang-sep {
+    color: #444444;
+    font-size: 0.9rem;
+}
