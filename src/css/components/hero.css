@@ -62,7 +62,7 @@
     text-underline-offset: 3px; 
     
     /* Petit espace avant le lien pour ne pas coller au dernier mot */
-    margin-left: 5px;
+    margin-left: 0;
     
     /* Transition douce pour l'effet au survol */
     transition: color 0.2s ease;

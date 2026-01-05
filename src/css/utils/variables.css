@@ -38,3 +38,19 @@
 
     --radius-sm: 4px;
 }
+
+:root {
+    /* L'ordre est important :
+       1. "SF Compact Rounded" : Pour ceux qui sont sur Mac/iOS.
+       2. "Nunito" : Pour Windows, Android et les autres (99% identique).
+       3. sans-serif : Sécurité.
+    */
+    --font-sans: "SF Compact Rounded", "Nunito", sans-serif;
+    
+    /* Si vous n'utilisez pas de variable, mettez ceci dans le body : */
+}
+
+/* Ou directement dans le body si vous ne trouvez pas les variables */
+body {
+    font-family: "SF Compact Rounded", "Nunito", sans-serif;
+}
