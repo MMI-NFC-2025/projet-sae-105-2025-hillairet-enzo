@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hidden Stars - Contact</title>
-    
     <link rel="stylesheet" href="../src/css/style.css">
     <link rel="stylesheet" href="../src/css/pages/contact.css">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    
     <link rel="icon" type="image/webp" href="../assets/img/logo-favicon.webp">
 </head>
 <body>
@@ -43,7 +40,7 @@
                     <li class="menu__item"><a class="menu__link" href="lesfilms-en.html">Movies.</a></li>
                     <li class="menu__item"><a class="menu__link" href="figuresfemininesoubliees-en.html">Forgotten Figures.</a></li>
             
-                    <li class="menu__item menu__item--spacer"><a class="menu__link active" href="contact-en.html">Contact.</a></li>
+                    <li class="menu__item menu__item--spacer"><a class="menu__link active" href="contact.html">Contact.</a></li>
                     <li class="menu__item"><a class="menu__link" href="apropos-en.html">About.</a></li>
                     <li class="menu__item"><a class="menu__link" href="glossaire-en.html">Glossary.</a></li>
                     <li class="menu__item"><a class="menu__link" href="projets-en.html">Other Projects.</a></li>
@@ -62,25 +59,41 @@
 
         <section class="section contact-form-section">
             <div class="container">
-                <form action="https://formspree.io/f/xojvyqla" method="POST" class="contact-form">
-                    
+                <p class="contact-intro">
+                    Want to know more about the project, ask a question, or share your opinion?
+                </p>
+
+                <p class="contact-intro">
+                    Fill out the form below, I'd be happy to chat with you!
+                </p>
+
+                <form action="https://formspree.io/f/xojvyqla" method="POST" class="contact-form">                   
                     <div class="form-group">
-                        <input type="text" name="name" id="name" placeholder="Last Name" required>
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Ex: Marie Curie">
                     </div>
 
                     <div class="form-group">
-                        <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
+                        <label for="email">Your Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="name@example.com">
                     </div>
 
                     <div class="form-group">
-                        <input type="email" name="email" id="email" placeholder="Email" required>
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
                     </div>
 
                     <div class="form-group">
-                        <textarea name="message" id="message" rows="5" placeholder="Message" required></textarea>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn--submit">Send</button>
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="rgpd" name="rgpd" required>
+                        <label for="rgpd">I agree that my information will be used only in the context of this contact.</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send</button>
                 </form>
             </div>
         </section>
