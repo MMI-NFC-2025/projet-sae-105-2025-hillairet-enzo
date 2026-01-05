@@ -1,12 +1,5 @@
-/* src/css/pages/lachercheuse.css */
-
-/* --- EN-TÊTE --- */
-
 .bio-header {
-    /* On ajoute de l'espace en haut pour compenser la hauteur du menu */
     padding-top: 100px; 
-    
-    /* On garde un peu d'espace en bas aussi */
     padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
@@ -26,12 +19,10 @@
 }
 
 .bio-profile {
-    /* --- CHANGEMENT ICI --- */
-    /* On enlève la marge intérieure du haut pour que ça remonte */
     padding-top: 0;
     margin-top: 0;
 }
-/* --- PROFIL (Photo + Infos) --- */
+
 .bio-profile__content {
     display: flex;
     flex-direction: column;
@@ -76,7 +67,6 @@
     margin-right: 5px;
 }
 
-/* --- TEXTES --- */
 .bio-text p, .bio-matilda p, .bio-spectro p {
     font-size: 1rem;
     line-height: 1.6;
@@ -86,28 +76,20 @@
     padding-right: 10px;
 }
 
-/* src/css/pages/lachercheuse.css */
-
-/* --- CARTES ATOMES (Images) --- */
 .atom-container {
     display: flex;
-    gap: 20px; /* Espace entre les deux images */
+    gap: 20px; 
     flex-wrap: wrap;
-    justify-content: center; /* Centré sur mobile */
+    justify-content: center; 
     margin: 10px 0 10px 0;
-    
-    /* Alignement à gauche (marge de 10px comme le reste) */
     padding-left: 10px;
     padding-right: 10px;
 }
 
 .atom-img {
-    width: 150px; /* Ajuste la taille selon tes envies */
-    height: auto; /* Garde les proportions */
+    width: 150px; 
+    height: auto; 
     display: block;
-    
-    /* Optionnel : petit effet arrondi ou ombre si tu veux */
-    /* border-radius: 8px; */
 }
 
 .atom-header {
@@ -130,40 +112,32 @@
     font-size: 1rem;
 }
 
-/* --- SCHÉMA SPECTRE --- */
 .spectro-figure {
     margin: 40px 0;
     margin: 10px 0 40px 0;
     
-    /* Alignement à gauche avec la sécurité de 10px */
     padding-left: 10px;
     padding-right: 10px;
     
-    /* Important : on enlève le centrage pour que le texte reste à gauche */
     text-align: left; 
 }
 
-/* src/css/pages/lachercheuse.css */
-
-/* LE TITRE "Schéma." */
 .spectro-main-title {
-    display: block;        /* Force le retour à la ligne */
+    display: block;        
     color: white;
-    font-size: 2.5rem;     /* Taille titre (comme "Informations.") */
-    font-weight: 700;      /* Bien gras */
+    font-size: 2.5rem;     
+    font-weight: 700;     
     line-height: 1.2;
 }
 
-/* LE SOUS-TITRE "Spectre lumineux." */
 .spectro-sub-title {
-    display: block;        /* Force le retour à la ligne */
-    color: var(--color-text-light); /* Gris (ou met #cccccc) */
-    font-size: 1.4rem;     /* Un peu plus petit */
-    font-weight: 400;      /* Texte normal */
-    margin-bottom: 10px;   /* Espace avant l'image */
+    display: block;        
+    color: var(--color-text-light);
+    font-size: 1.4rem;    
+    font-weight: 400;     
+    margin-bottom: 10px;  
 }
 
-/* On s'assure que le conteneur est bien aligné (Rappel) */
 .spectro-figure {
     margin: 40px 0;
     padding-left: 10px;
@@ -171,38 +145,30 @@
     text-align: left;
 }
 
-/* src/css/pages/lachercheuse.css */
-
-/* --- SECTION EFFET MATILDA --- */
 .bio-matilda {
     margin-top: 40px; 
     margin-bottom: 60px;
-    
-    /* C'est CE padding qui aligne tout le bloc à 10px du bord */
     padding-left: 10px; 
     padding-right: 10px;
 }
 
-/* On cible le Titre ET les Paragraphes ensemble pour qu'ils soient pareils */
+
 .bio-matilda .bio-section-title, 
 .bio-matilda p {
-    /* On force l'alignement à gauche strict */
     margin-left: 0;
     padding-left: 0;
     text-align: left;
 }
 
-/* Styles spécifiques du TITRE */
 .bio-section-title {
     font-size: 2.5rem;
     font-weight: 700;
     color: white;
     margin-bottom: 20px;
     line-height: 1.1;
-    margin-top: 0; /* Sécurité pour ne pas qu'il descende trop */
+    margin-top: 0; 
 }
 
-/* Styles spécifiques du TEXTE */
 .bio-matilda p {
     font-size: 1rem;
     line-height: 1.6;
@@ -211,7 +177,6 @@
     max-width: 70ch;
 }
 
-/* Le mot en gras */
 .bio-matilda strong {
     color: #878080;
     font-weight: 600;

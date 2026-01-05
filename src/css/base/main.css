@@ -1,48 +1,30 @@
-/* src/css/base/main.css */
-
-/* 1. Reset standard (pour mieux gérer les tailles) */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-/* 2. Style global du corps (BODY) */
 body {
-    /* C'est ici qu'on applique le NOIR défini dans tes variables */
     background-color: var(--color-bg);
-    
-    /* C'est ici qu'on applique le BLANC pour le texte */
     color: var(--color-text);
-    
-    /* Police par défaut */
     font-family: var(--font-sans);
-    
-    /* On enlève les marges blanches autour de la page */
     margin: 0;
-    
-    /* Un peu d'espace entre les lignes pour la lisibilité */
     line-height: 1.5;
-    
-    /* Lissage des polices */
     -webkit-font-smoothing: antialiased;
 }
 
-/* 3. Images réactives (pour qu'elles ne dépassent jamais de l'écran) */
 img {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-/* 4. Liens (on enlève le souligné bleu moche par défaut) */
 a {
     text-decoration: none;
     color: inherit;
     transition: color 0.3s ease;
 }
 
-/* 5. Titres (on enlève la marge du haut par défaut) */
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     font-weight: 600;

@@ -6,23 +6,18 @@
     padding: var(--space-md) var(--space-xl);
     font-weight: 600;
     border-radius: var(--radius-full);
-    /* Bouton arrondi */
     transition: all 0.3s ease;
     cursor: pointer;
     border: 1px solid transparent;
 }
 
-/* Style Principal (Fond blanc, texte noir - ou l'inverse selon ton goût) */
 .btn--primary {
     background-color: var(--color-text);
-    /* Blanc */
     color: var(--color-bg);
-    /* Noir */
 }
 
 .btn--primary:hover {
     background-color: transparent;
     color: var(--color-text);
     border-color: var(--color-text);
-    /* Devient contour blanc au survol */
 }

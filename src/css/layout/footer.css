@@ -1,12 +1,9 @@
-/* src/css/layout/footer.css */
 
-/* --- 1. LE CONTENEUR PRINCIPAL --- */
 .footer {
-    background-color: #070606; /* Noir profond */
+    background-color: #070606; 
     color: white;
     padding: var(--space-3xl) var(--space-xl);
     
-    /* Espace entre le carrousel et le footer */
     margin-top: 60px; 
     border: none;
 }
@@ -17,19 +14,16 @@
     
     display: flex;
     flex-direction: column;
-    gap: 0; /* Espace entre Logo / Liens / Bas de page */
+    gap: 0; 
     
     text-align: left;
 }
 
-
-/* --- 2. LE LOGO (Image seule) --- */
 .footer__logo {
-    display: block; /* Plus besoin de flex car il n'y a que l'image */
+    display: block; 
     margin-bottom: 20px;
 }
 
-/* On cible l'image à l'intérieur pour l'alignement */
 .footer__logo img {
     height: 46px; 
     width: auto; 
@@ -38,8 +32,6 @@
     margin-left: 5px; 
 }
 
-
-/* --- 3. LA LISTE DES LIENS --- */
 .footer__nav {
     width: 100%;
 }
@@ -47,7 +39,7 @@
 .footer__list {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Espace vertical entre les liens */
+    gap: 15px; 
     list-style: none;
     padding: 0;
     margin: 0;
@@ -55,7 +47,7 @@
 
 .footer__list a {
     color: white;
-    font-size: 1.4rem; /* Texte grand et lisible */
+    font-size: 1.4rem; 
     text-decoration: none;
     line-height: 0.9;
     transition: opacity 0.3s ease;
@@ -63,11 +55,9 @@
 }
 
 .footer__list a:hover {
-    opacity: 0.7; /* Léger effet gris au survol */
+    opacity: 0.7; 
 }
 
-
-/* --- 4. LE BAS DE PAGE (Crédits + Gros Logo) --- */
 .footer__bottom {
     display: flex;
     justify-content: space-between; 
@@ -76,69 +66,56 @@
 }
 
 .footer__left-group {
-    flex: 1; /* Prend toute la place libre à gauche */
+    flex: 1; 
     display: flex;
-    flex-direction: column; /* C'EST ICI LE SECRET : Empile verticalement */
-    gap: 15px; /* Espace entre le texte et les icônes */
+    flex-direction: column; 
+    gap: 15px;
     
-    /* On garde tes marges */
+    
     margin-left: 7px;
     padding-right: 15px;
 }
 
 .footer__desc {
-    /* --- MODIFICATION 1 : LE TEXTE S'ADAPTE --- */
-    /* On lui dit de prendre toute la place disponible à gauche */
     flex: 1; 
-    
     font-size: 1rem;
     color: #cccccc; 
     line-height: 1.1;
     margin: 0;
 }
 
-/* src/css/layout/footer.css */
-
-/* --- LES ICÔNES RÉSEAUX SOCIAUX --- */
 .footer__social {
     display: flex;
-    gap: 15px; /* Espace entre les images */
+    gap: 15px; 
     align-items: center;
 }
 
 .footer__social a {
-    display: block; /* Important pour que le lien prenne la taille de l'image */
+    display: block; 
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* On cible tes images */
 .footer__social img {
-    width: 30px; /* Ajuste la taille ici (30px est une bonne moyenne) */
+    width: 30px; 
     height: auto;
     display: block;
 }
 
-/* Petit effet de rebond au survol */
 .footer__social a:hover {
     transform: translateY(-3px);
     opacity: 0.8;
 }
 
 .footer__scroll-top {
-    display: block;       /* Se comporte comme un bloc pour bien prendre la taille de l'image */
-    flex-shrink: 0;       /* Empêche le lien de se faire écraser */
+    display: block;       
+    flex-shrink: 0;       
     text-decoration: none;
-    cursor: pointer;      /* Affiche la petite main au survol */
+    cursor: pointer;      
 }
 
 .footer__big-img {
-    /* --- 1. ON AGRANDIT --- */
-    /* On passe à 180px (ou plus si tu veux) */
     width: 150px; 
-    
-    /* Important : garde ça pour qu'il ne s'écrase pas */
     flex-shrink: 0; 
-    
     height: auto;
     display: block;
     transform: translateY(10px);

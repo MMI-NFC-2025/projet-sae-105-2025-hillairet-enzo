@@ -1,6 +1,3 @@
-/* src/css/pages/projets.css */
-
-/* --- EN-TÊTE --- */
 .projects-header {
     padding-top: 80px; 
     padding-bottom: 10px;
@@ -26,9 +23,7 @@
     max-width: 800px;
 }
 
-/* --- LISTE DES PROJETS --- */
 .projects-list-section {
-    /* Le conteneur a déjà 10px de marge sur les côtés */
     padding-left: 10px;
     padding-right: 10px;
     
@@ -44,31 +39,21 @@
     max-width: 600px; 
     margin-left: auto;
     margin-right: auto;
-    /* On s'assure que la liste prend toute la largeur dispo */
     width: 100%; 
 }
 
-/* --- CARTE PROJET --- */
 .project-card {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
     background-color: #ffffff; 
     border: 1px solid #cccccc;
     border-radius: 25px; 
-    
-    /* MODIFICATION : On prend 100% de l'espace du parent (qui est déjà à 10px du bord) */
     width: 100% !important;
-    
-    /* Très important pour que le padding ne dépasse pas */
     box-sizing: border-box; 
-    
     margin-left: auto;
     margin-right: auto;
-    
     padding: 15px 20px;
-    
     text-decoration: none;
     transition: all 0.3s ease;
 }

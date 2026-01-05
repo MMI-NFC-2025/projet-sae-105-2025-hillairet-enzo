@@ -1,8 +1,4 @@
-/* src/css/pages/apropos.css */
-
-/* --- EN-TÊTE --- */
 .about-header {
-    /* Alignement identique à la page Contact */
     padding-top: 80px; 
     padding-bottom: 10px;
     padding-left: 10px;
@@ -14,7 +10,6 @@
     font-weight: 700;
     color: #ffffff;
     
-    /* Collé au sous-titre */
     margin-bottom: 0; 
     margin-top: 0;
     line-height: 1.1;
@@ -25,21 +20,16 @@
     font-size: 1.4rem;
     color: var(--color-text-light, #cccccc);
     font-weight: 400;
-    
-    /* Collé au titre */
     margin-top: 5px; 
-    
     margin-bottom: 10px; 
     line-height: 1.2;
 }
 
-/* --- CONTENU --- */
 .about-content {
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 60px;
     
-    /* Collé au bloc du haut */
     margin-top: 0 !important;
     padding-top: 0 !important;
 }
@@ -48,15 +38,10 @@
     font-size: 1rem;
     line-height: 1.6;
     color: #ffffff;
-    
-    /* Espace entre les paragraphes */
     margin-bottom: 20px; 
-    
-    /* Largeur de lecture confortable */
     max-width: 800px;
 }
 
-/* Suppression de la marge du dernier paragraphe */
 .about-content p:last-child {
     margin-bottom: 0;
 }
