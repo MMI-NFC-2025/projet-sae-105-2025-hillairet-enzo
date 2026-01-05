@@ -1,0 +1,90 @@
+/* --- PAGE 404 --- */
+
+/* Centre le contenu au milieu de l'écran */
+.error-main {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 1.5rem;
+    background-color: var(--bg-color, #0b0d17); /* Couleur de fond sombre par défaut */
+    color: var(--text-color, #fff);
+}
+
+/* Le gros chiffre 404 */
+.error-code {
+    font-size: clamp(6rem, 15vw, 12rem); /* Taille adaptative très grande */
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 1rem;
+    
+    /* Couleur dorée (celle de votre site) */
+    color: #dfa35e; 
+    
+    /* Petit effet de lueur */
+    text-shadow: 0 0 30px rgba(223, 163, 94, 0.2);
+}
+
+.error-text {
+    margin-bottom: 3rem;
+}
+
+.error-title {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.error-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.7;
+    margin-bottom: 2rem;
+    font-style: italic;
+    color: #ccc;
+}
+
+.error-desc, 
+.error-desc-en {
+    max-width: 600px;
+    margin: 0 auto 0.5rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.error-desc-en {
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Conteneur des boutons */
+.error-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+/* Style spécifique pour les boutons de la 404 */
+.btn--error {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 2px solid #dfa35e; /* Bordure dorée */
+    background-color: transparent;
+    color: #dfa35e;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.btn--error:hover {
+    background-color: #dfa35e;
+    color: #000; /* Texte noir au survol */
+    box-shadow: 0 0 15px rgba(223, 163, 94, 0.4);
+    transform: translateY(-3px);
+}
