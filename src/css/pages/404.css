@@ -8,7 +8,7 @@
     justify-content: center;
     text-align: center;
     padding: 4rem 1.5rem;
-    background-color: var(--bg-color, #0b0d17); /* Couleur de fond sombre par défaut */
+    background-color: var(--bg-color, #000000); /* Couleur de fond sombre par défaut */
     color: var(--text-color, #fff);
 }
 
@@ -20,7 +20,7 @@
     margin-bottom: 1rem;
     
     /* Couleur dorée (celle de votre site) */
-    color: #dfa35e; 
+    color: #ffffff; 
     
     /* Petit effet de lueur */
     text-shadow: 0 0 30px rgba(223, 163, 94, 0.2);
@@ -55,6 +55,7 @@
 .error-desc-en {
     font-style: italic;
     opacity: 0.8;
+    margin-top: 20px;
 }
 
 /* Conteneur des boutons */
@@ -70,9 +71,9 @@
 .btn--error {
     display: inline-block;
     padding: 12px 30px;
-    border: 2px solid #dfa35e; /* Bordure dorée */
+    border: 2px solid #ffffff; /* Bordure dorée */
     background-color: transparent;
-    color: #dfa35e;
+    color: #ffffff;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
