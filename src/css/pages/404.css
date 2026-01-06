@@ -1,6 +1,10 @@
-.error-main {
+/* src/css/pages/404.css */
+
+/* --- BLOC PRINCIPAL --- */
+.error-page {
     min-height: 70vh;
     display: flex;
+    flex-direction: column; /* Ajout pour bien empiler */
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -9,7 +13,10 @@
     color: var(--text-color, #fff);
 }
 
-.error-code {
+/* --- ÉLÉMENTS --- */
+
+/* Le code 404 */
+.error-page__code {
     font-size: clamp(6rem, 15vw, 12rem); 
     font-weight: 700;
     line-height: 1;
@@ -18,39 +25,45 @@
     text-shadow: 0 0 30px rgba(223, 163, 94, 0.2);
 }
 
-.error-text {
+/* Conteneur du texte */
+.error-page__content {
     margin-bottom: 3rem;
 }
 
-.error-title {
+/* Titre */
+.error-page__title {
     font-size: clamp(1.5rem, 5vw, 2.5rem);
     margin-bottom: 0.5rem;
     color: #fff;
 }
 
-.error-subtitle {
+/* Sous-titre */
+.error-page__subtitle {
     font-size: 1.2rem;
     opacity: 0.7;
     margin-bottom: 2rem;
-    font-style: italic;
     color: #ccc;
 }
 
-.error-desc, 
-.error-desc-en {
+/* Description standard */
+.error-page__desc {
     max-width: 600px;
     margin: 0 auto 0.5rem;
     line-height: 1.6;
     font-size: 1.1rem;
 }
 
-.error-desc-en {
-    font-style: italic;
+/* Description en anglais (Modificateur BEM) */
+.error-page__desc--en {
+    max-width: 600px;
+    margin: 20px auto 0.5rem; /* Marge du haut intégrée ici */
+    line-height: 1.6;
+    font-size: 1.1rem;
     opacity: 0.8;
-    margin-top: 20px;
 }
 
-.error-buttons {
+/* Conteneur des boutons (Actions) */
+.error-page__actions {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
@@ -58,6 +71,7 @@
     margin-top: 2.5rem;
 }
 
+/* --- COMPOSANT BOUTON (Modificateur) --- */
 .btn--error {
     display: inline-block;
     padding: 12px 30px;
@@ -74,8 +88,8 @@
 }
 
 .btn--error:hover {
-    background-color: #dfa35e;
-    color: #000; 
-    box-shadow: 0 0 15px rgba(223, 163, 94, 0.4);
+    background-color: #ffffff; /* Fond blanc */
+    color: #000000; /* Texte noir */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
     transform: translateY(-3px);
 }
