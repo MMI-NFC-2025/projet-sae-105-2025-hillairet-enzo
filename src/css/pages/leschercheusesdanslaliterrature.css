@@ -106,7 +106,6 @@
     display: block;
     font-size: 1rem;
     color: #878080; 
-    font-style: italic;
     margin-bottom: 10px;
 }
 
@@ -269,11 +268,11 @@
     padding: 15px;
     
     background-color: rgba(0, 0, 0, 0.05); 
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 260px; 
+    width: 360px; 
     max-width: 70vw; 
 }
 
@@ -287,7 +286,7 @@
 
 .timeline-name {
     font-size: 1.1rem;
-    color: #cccccc; 
+    color: #ffffff; 
 }
 
 
@@ -314,4 +313,38 @@
 
 .book-summary-item {
     border-bottom: none !important;
+}
+
+.book-card__quote, 
+.book-card__desc,
+blockquote, 
+em, 
+i {
+    font-style: normal !important;
+}
+
+/* Modification de la classe existante */
+.timeline-name {
+    font-size: 1.1rem;
+    color: #cccccc; 
+    /* AJOUTS POUR L'ALIGNEMENT */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espace entre le nom et l'icône */
+    flex-wrap: wrap; /* Sécurité responsive */
+}
+
+/* AJOUT : Style de l'icône */
+.wiki-icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #666; /* Gris discret */
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.wiki-icon-link:hover {
+    color: #ffffff; /* Blanc au survol */
+    transform: translateY(-2px);
 }

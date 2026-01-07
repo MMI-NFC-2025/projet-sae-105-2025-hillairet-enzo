@@ -18,7 +18,7 @@
 .subtitle-hero {
     display: block;
     font-size: 1.4rem;
-    color: var(--color-text-light, #cccccc);
+    color: var(--color-text-light, #ffffff);
     font-weight: 400;
     margin-top: 5px; 
     margin-bottom: 10px; 

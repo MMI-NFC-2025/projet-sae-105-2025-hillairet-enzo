@@ -17,7 +17,7 @@
 .subtitle-hero {
     display: block;
     font-size: 1.4rem;
-    color: var(--color-text-light, #cccccc);
+    color: var(--color-text-light, #ffffff);
     font-weight: 400;
     margin-top: 5px;      
     margin-bottom: 30px; 
@@ -57,12 +57,9 @@
     gap: 20px; 
     overflow-x: auto;
     scroll-snap-type: x mandatory; 
-    
     padding: 10px 10px 10px 10px; 
-    
     margin-top: -10px;
     margin-bottom: 0;
-        
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
 }
@@ -73,16 +70,13 @@
 
 .carousel__link {
     flex: 0 0 auto;
-    
     width: 85vw; 
-    
     scroll-snap-align: center;
     background: transparent;
     text-decoration: none;
     transition: transform 0.3s ease;
     display: block;
 }
-
 
 .carousel__img {
     width: 100%;
@@ -104,9 +98,7 @@
 .films-summaries {
     padding-left: 10px;
     padding-right: 10px;
-    
     margin-top: 0px; 
-    
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -135,7 +127,7 @@
 .films-conclusion p {
     font-size: 1rem;
     line-height: 1.6;
-    color: var(--color-text, #cccccc);
+    color: var(--color-text, #ffffff);
     margin-bottom: 20px;
 }
 
@@ -148,41 +140,32 @@
 
 .quote-subtitle {
     font-size: 1.4rem;
-    color: var(--color-text-light, #cccccc);
+    color: var(--color-text-light, #ffffff);
     font-weight: 400;
-    
     margin-top: -30px;
     margin-bottom: 20px;
-    
     padding-left: 10px; 
     padding-right: 10px;
 }
 
 .trailer-container {
-    padding-left: 10px;
-    padding-right: 10px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    padding-left: 10px;    
+    padding-right: 10px;   
+    max-width: 800px;     
+    margin-left: auto;      
+    margin-right: auto;     
+    box-sizing: border-box; 
 }
 
-.video-responsive {
-    position: relative;
-    padding-bottom: 56.25%; 
-    height: 0;
-    overflow: hidden;
-    border: 4px solid #ffffff; 
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-    background-color: black;
-}
-
-.video-responsive iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
+.film-card__video {
     width: 100%;
-    height: 100%;
+    height: auto;
+    border-radius: 15px; 
+    display: block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+
+    border: 2px solid rgb(255, 255, 255); 
 }
 
 .section {

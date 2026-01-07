@@ -59,7 +59,7 @@
 
 .highlight-text {
     font-style: italic;
-    color: #cccccc;
+    color: #ffffff;
     border-left: 2px solid white;
     padding-left: 15px;
 }
@@ -90,7 +90,7 @@
 .analysis-text {
     font-size: 1rem;
     line-height: 1.6;
-    color: #cccccc;
+    color: #ffffff;
     margin-top: 30px !important; 
     padding: 0;
     display: block;

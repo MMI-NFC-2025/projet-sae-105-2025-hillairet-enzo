@@ -17,7 +17,7 @@
 .subtitle-hero {
     display: block;
     font-size: 1.4rem;
-    color: var(--color-text-light, #cccccc);
+    color: var(--color-text-light, #ffffff);
     font-weight: 400;
     margin-top: 0;
     margin-bottom: 10px; 
@@ -45,17 +45,35 @@
     gap: 5px;
 }
 
+/* MODIFICATION ICI : On utilise flexbox pour aligner le texte et l'icône */
 .glossary-term {
     font-size: 1.2rem;
     font-weight: 700;
     color: #ffffff;
     margin: 0;
+    display: flex;          
+    align-items: center;   
+    gap: 10px;              
+}
+
+/* Le style de l'icône */
+.glossary-wiki-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;            
+    transition: all 0.3s ease;
+}
+
+.glossary-wiki-link:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
 }
 
 .glossary-def {
     font-size: 1rem;
     line-height: 1.6;
-    color: #cccccc; 
+    color: #ffffff; 
     margin: 0;      
     max-width: 70ch;
 }
